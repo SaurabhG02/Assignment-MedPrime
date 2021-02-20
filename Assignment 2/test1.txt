@@ -1,0 +1,26 @@
+Before we go into building the actual application, we need to take a quick step back to understand at a very high level what a REST API is. Ironically, REST APIs are not something new. It has been around since the year 2000 but has been very popular recently with the rise of JavaScript libraries. If you are curious about all the specific details, I’ll let you go ahead and read about it on Google as I am not trying to bore you with all these crazy details.
+At a very high level, REST APIs are a way for developers to pass data back and forth for an application. It uses the concept of CRUD (Create, Read, Update, Delete). CRUD operations are performed on a piece of data inside of a database but with REST APIs we use the verbs POST, GET, PUT, and DELETE instead.
+With that all said, let's get into building the actual application! If none of this makes sense to you, then no worries, hopefully, the code will speak for itself as this tutorial is very straightforward. If you still have questions, then feel free to reach out in the responses below!
+Table of Contents
+Step 1: Installing Flask
+Step 2: Setting up the Flask Application
+Step 3: Starting the Flask Application
+Step 4: Creating the REST API Endpoint
+Step 1: Installing Flask
+The first step to get this application up and running is to install Flask. What is Flask you ask? Long story short, Flask is a micro web framework that allows us to create endpoints inside of Python. It has other functionality, but we only care about the REST APIs here. There are other frameworks out there that allow us to achieve this same functionality, but Flask is a pretty popular framework so we will be working with it in this article.
+To install Flask, it’s pretty easy. I will be using Python 3.8 here, but any version of Python 3 should work.
+Step 2: Setting up the Flask Application
+So now that we have Flask installed on our machines, we need to set our project up which means we will need to create a new Python file. So let’s go ahead and create a new file called main.py .
+Once you have created the new file, we need to populate it with code that will allow us to run the Flask application.
+This code snippet is pretty straightforward. Basically we are importing the Flask object at the top of the file. After importing it, we define a brand new Flask object by making an app variable. The Flask constructor takes in a package name which is what we are doing on line 7.
+The interesting part comes in on line 10. We are defining a “route.” Basically it is adding whatever string we put inside of the route as a webpage for our application. This will become more important when we start implementing our own REST endpoint.
+Now that we have a simple Flask application, let’s go ahead and start it!
+Step 3: Starting the Flask Application
+Navigate to the file that you created inside of your terminal and run the command:
+You should see an output similar to the image above after running the main.py file.
+Now, there are two things you can do to test to see if the application is doing what we told it to do. The first option would be to simply open up a browser and go to the site that it’s running on, http://127.0.0.1:5000/ or http://localhost:5000/ . Your browser should show “Hello world!”
+Step 4: Creating the REST API Endpoint
+Now that we have a basic index route that our users can hit, what if our users want to access an endpoint that we expose for some type of model we are creating? Well, this is where we will introduce a REST endpoint into our application.
+So this part is almost as simple as the previous step. The concept behind it is the same, we are just going to need to pay attention to a few more parts.
+Remember, REST APIs retrieve data from an application as well as giving data to an application. In this case, we are creating an endpoint so that our users can retrieve data from our application. We will not be going over putting data into the application as we would need a database to be set up for that. If you would like to see that, then feel free to leave a response and I will create a tutorial on that!
+So let’s say we are creating an application where we are storing books. Our model that is being stored in our database might look something like this:
