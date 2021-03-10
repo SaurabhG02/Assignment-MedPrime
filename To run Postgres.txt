@@ -1,0 +1,25 @@
+1.docker run -d postgres -e POSTGRES_PASSWORD=passwasd -d postgres
+
+
+1.docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+
+
+
+
+
+
+1.docker run --name some-postgres12 -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres 
+
+
+docker run -p 80:80  -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com'  -e 'PGADMIN_DEFAULT_PASSWORD=Passwasd' -d dpage/pgadmin4
+
+docker run --name postgres12 -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres DB_HOST=127.0.0.1 DB_PORT=5431
+
+
+
+docker run --name postgres3 -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_USER=postgres -e DB_HOST=127.0.0.1 -e DB_PORT=5431 -e listen_addresses = '127.0.0.1' -d postgres
+
+##Network check
+1.docker network ls
+2.docker network inspect bridge
+
